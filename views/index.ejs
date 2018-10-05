@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node Sample App</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="jumbotron">
+		<h1>This Is Heroku Awesome!</h1>
+		<p>This is the sample of Natural.JS </p>
+		<div style="border:1px solid 	#F0F8FF; padding:20px; border-radius:15px; background-color:	#F0F8FF;color:black;">
+		TEXT ENTERED  &nbsp;:  &nbsp; &nbsp;  <%= results[0] %> 
+		<br/> <br/>
+		USE CASE &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : &nbsp; &nbsp;  <%= results[1] %>
+		</div>
+	</div>
+
+			
+				
+	<script>
+
+	 $('#json').click(function(){ 
+		$.post("/api/foo", function(data) {
+		  console.log( "Foo function result:", data );
+		});
+	});
+	</script>
+</div>
+</body>
+</html>
